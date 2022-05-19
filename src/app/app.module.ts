@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './components/login/login.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
     HomeComponent,
     LoginComponent,
     FeedbackComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
