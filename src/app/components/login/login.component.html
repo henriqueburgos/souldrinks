@@ -1,1 +1,21 @@
-<p>login works!</p>
+<form [formGroup]="loginForm" class="m-3" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input formControlName="email" id="email" name="email" type="email" class="form-control" placeholder="Seu email" (keyup.enter)="onSubmit()"
+            required />
+        <small *ngIf="email?.touched && email?.invalid" class="text-danger">
+            <span *ngIf="email?.hasError('required')">Campo obrigatório.</span>
+            <span *ngIf="email?.hasError('email')">Campo inválido.</span>
+        </small>
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input formControlName="senha" id="senha" name="senha" type="password" class="form-control"
+            placeholder="Sua senha" (keyup.enter)="onSubmit()" required />
+        <small *ngIf="senha?.touched && senha?.invalid" class="text-danger">
+            <span *ngIf="senha?.hasError('required')">Campo obrigatório.</span>
+            <span *ngIf="senha?.hasError('minlength')">Mínimo de 8 caractéres</span>
+        </small>
+    </div>
+    <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Login</button>
+</form>
