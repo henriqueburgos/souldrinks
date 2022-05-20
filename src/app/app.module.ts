@@ -11,6 +11,7 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
+import { QuizComponent } from './components/quiz/quiz.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -23,6 +24,7 @@ const maskConfig: Partial<IConfig> = {
     LoginComponent,
     FeedbackComponent,
     CadastroComponent,
+    QuizComponent,
   ],
   imports: [
     BrowserModule,
