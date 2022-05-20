@@ -6,6 +6,7 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProdutoComponent } from './components/produto/produto.component';
+import { QuizzComponent } from './components/quizz/quizz.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'feedback', component: FeedbackComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'produto', component: ProdutoComponent},
-  { path: 'error404', component: Error404Component}
+  { path: 'error404', component: Error404Component},
+  { path: 'quizz', component: QuizzComponent}
 ];
 
 
