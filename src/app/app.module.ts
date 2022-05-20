@@ -9,6 +9,12 @@ import { LoginComponent } from './components/login/login.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
+
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
 
 @NgModule({
   declarations: [
@@ -22,8 +28,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(maskConfig),
   ],
+
+
   providers: [],
   bootstrap: [AppComponent]
 })
