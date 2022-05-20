@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'feedback', component: FeedbackComponent },
   { path: 'cadastro', component: CadastroComponent },
-  { path: 'cadastro', component: ProdutoComponent}
+  { path: 'produto', component: ProdutoComponent}
 ];
 
 
