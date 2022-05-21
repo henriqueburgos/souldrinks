@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { LocalStorageService } from 'src/app/shared/services/localStorage/local-storage.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,13 +9,13 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private ls:LocalStorageService) { }
 
   cadastroForm = this.fb.group({
     nome:['',[Validators.required]],
     dataNasc: ['',[Validators.required]],
     cpf: ['',[Validators.required]],
-    celular:['',[Validators.required, Validators.email]],
+    celular:['',[Validators.required]],
     email:['',[Validators.required, Validators.email]],
     senha:['',[Validators.required, Validators.minLength(8)]],
   })
@@ -44,7 +45,8 @@ export class CadastroComponent implements OnInit {
   }
 
   onSubmit() {
-    alert("Um brinde a vida!");
+    this.ls.set(this.cadastroForm.value)
+       alert("Um brinde a vida!");
     console.log(this.cadastroForm.value)
   }
 
