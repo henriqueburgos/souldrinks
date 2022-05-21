@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
 import { Error404Component } from './components/error404/error404.component';
 import { QuizzComponent } from './components/quizz/quizz.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -27,6 +28,7 @@ const maskConfig: Partial<IConfig> = {
     CadastroComponent,
     Error404Component,
     QuizzComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

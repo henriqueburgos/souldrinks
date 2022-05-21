@@ -5,6 +5,7 @@ import { Error404Component } from './components/error404/error404.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProdutoComponent } from './components/produto/produto.component';
 import { QuizzComponent } from './components/quizz/quizz.component';
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'cadastro', component: CadastroComponent },
   { path: 'produto', component: ProdutoComponent},
   { path: 'error404', component: Error404Component},
-  { path: 'quizz', component: QuizzComponent}
+  { path: 'quizz', component: QuizzComponent},
+  { path: 'navbar', component: NavbarComponent}
 ];
 
 
