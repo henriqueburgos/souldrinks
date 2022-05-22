@@ -1,13 +1,25 @@
 export interface Produtos {
     imagem: string;
-    nomeDoProduto: string;
+    nomeProduto: string;
     descricao: string;
-    preco: string;
-    emPromocao: string;
-    desconto: string;
-    categoria: CategoriaProduto;
+    preco: number;
+    emPromocao: boolean;
+    desconto: number;
+    categoriaBebida: CategoriaBebida;
 }
-export enum CategoriaProduto{
-    BEBIDAS = 'bebidas'
-
+export enum CategoriaBebida {
+    ABSINTO = 'absinto',
+    CACHACA = 'cachaça',
+    CERVEJA = 'cerveja',
+    CHAMPANHE = 'champanhe',
+    CONHAQUE = 'conhaque',
+    ENERGETICO = 'energético',
+    GIM = 'gim',
+    LICOR = 'licor',
+    RUM = 'rum',
+    SAQUE = 'saquê',
+    TEQUILA = 'tequila',
+    VINHO = 'vinho',
+    VODKA = 'vodka',
+    WHISKY = 'whisky'
 }
