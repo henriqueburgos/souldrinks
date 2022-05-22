@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-feedback',
@@ -7,8 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedbackComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
+  feedbackFormulario = this.fb.group({
+    nome: ['', [Validators.required, Validators.minLength(5)]], // é uma função dentro do array - um método
+    email: ['', [Validators.required, Validators.email]],
+    comentario: ['',[Validators.required, Validators.maxLength(50)]],
+   
+   
+  });
+
+  get nome() {
+    return this.feedbackFormulario.get('nome');
+  }
+
+  get email() {
+    return this.feedbackFormulario.get('email');
+  }
+
+  get comentario() {
+    return this.feedbackFormulario.get('comentario');
+  }
+
+
+
+  onSubmit() {
+    alert(`Bem vindo(a)!`);
+    console.log(this.feedbackFormulario.value);
+  }
+
+  
   ngOnInit(): void {
   }
 
