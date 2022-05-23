@@ -1,6 +1,8 @@
 <nav class="navbar navbar-dark bg-dark">
     <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="'/'">
       <img src="/assets/logo.jpg" alt="logo com texto" width="130" height="60">
+     </a>
       <a class="navbar-brand" [routerLink]="'/'" > {{nomeDoApp}}</a>      
       <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
         &#9776;

@@ -12,7 +12,7 @@ export class CadastroComponent implements OnInit {
   constructor(private fb: FormBuilder, private ls:LocalStorageService) { }
 
   cadastroForm = this.fb.group({
-    nome:['',[Validators.required]],
+    nome:['',[Validators.required, Validators.minLength(5)]],
     dataNasc: ['',[Validators.required]],
     cpf: ['',[Validators.required]],
     celular:['',[Validators.required]],
@@ -46,7 +46,7 @@ export class CadastroComponent implements OnInit {
 
   onSubmit() {
     this.ls.set(this.cadastroForm.value)
-       alert("Um brinde a vida!");
+       alert("Cadastro realizado com sucesso! Um brinde a vida!");
     console.log(this.cadastroForm.value)
   }
 

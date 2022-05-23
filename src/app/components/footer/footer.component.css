@@ -1,0 +1,13 @@
+.btn {
+    border: none;
+    color: white;
+    cursor: pointer; /* Mouse pointer on hover */
+    border-radius: 50px;
+    width: 50px;   
+}
+
+.texto {
+    color: black;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
