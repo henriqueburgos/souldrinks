@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UsuarioCad } from 'src/app/models/usuario-cad';
 import { LocalStorageService } from 'src/app/shared/services/localStorage/local-storage.service';
+import { ModalContentComponent } from '../modal-content/modal-content.component';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +12,7 @@ import { LocalStorageService } from 'src/app/shared/services/localStorage/local-
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private fb: FormBuilder, private ls:LocalStorageService) { }
+  constructor( private fb: FormBuilder, private ls:LocalStorageService, private modalService: NgbModal) { }
  
 
   loginForm = this.fb.group({
@@ -26,10 +28,10 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('senha');
   }
 
-logon:boolean=false
-usuarioLogado?:UsuarioCad
-blocklogin: boolean = false;
-numTent:number=0
+  logon:boolean=false
+  usuarioLogado?:UsuarioCad
+  blocklogin: boolean = false;
+  numTent:number=0
 
   onSubmit() {
     if (this.ls.get(this.email?.value)) {
@@ -61,6 +63,12 @@ numTent:number=0
       this.logon = false
     }}
     
-   }
+
+  open() {
+    const modalRef = this.modalService.open(ModalContentComponent);
+    modalRef.componentInstance.name = '';
+  }
+
+ }
 
 

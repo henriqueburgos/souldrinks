@@ -16,6 +16,7 @@ import { QuizzComponent } from './components/quizz/quizz.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component';
+import { ModalContentComponent } from './components/modal-content/modal-content.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -33,6 +34,7 @@ const maskConfig: Partial<IConfig> = {
     NavbarComponent,
     FooterComponent,
     NovoProdutoComponent,
+    ModalContentComponent,
   ],
   imports: [
     BrowserModule,
