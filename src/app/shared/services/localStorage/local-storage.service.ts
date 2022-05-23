@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { observable, Observable } from 'rxjs';
 import { UsuarioCad } from 'src/app/models/usuario-cad';
 
 @Injectable({
@@ -7,14 +8,24 @@ import { UsuarioCad } from 'src/app/models/usuario-cad';
 export class LocalStorageService {
 
   private armazenamento: Storage;
+  logon: boolean = false
+  usuariologado?: UsuarioCad | undefined;
 
   constructor() {
     this.armazenamento = window.localStorage;
   }
 
-  set(chave:UsuarioCad): boolean {
+  set(chave: UsuarioCad): boolean {
     if (this.armazenamento) {
-      this.armazenamento.setItem(chave.email.toString(),  JSON.stringify(chave));
+      this.armazenamento.setItem(chave.email.toString(), JSON.stringify(chave));
+      return true;
+    }
+    return false;
+  }
+
+  setLogon(chave: UsuarioCad): boolean {
+    if (this.armazenamento) {
+      this.armazenamento.setItem("_usuarioLogon", JSON.stringify(chave));
       return true;
     }
     return false;
@@ -41,6 +52,20 @@ export class LocalStorageService {
       return true;
     }
     return false;
+  }
+
+  
+  verificaLogon() {
+    if (this.get("_usuarioLogon")) {
+      this.logon = true
+      this.usuariologado=JSON.parse(this.get("_usuarioLogon"));
+    } else {
+      this.logon = false
+    }}
+
+  logOut() {
+    this.remove("_usuarioLogon")
+    this.logon = false
   }
 
 }
