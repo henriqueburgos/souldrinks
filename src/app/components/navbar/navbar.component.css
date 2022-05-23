@@ -1,0 +1,12 @@
+.direita{
+    display: flex;
+    align-items: flex-end;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: gray;
+    transition: 0.2s;
+}
