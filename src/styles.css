@@ -5,3 +5,8 @@
 .ng-valid {
     border-color: green;
 }
+
+.container {
+    border-radius: 10px;
+    padding: 10px;
+}

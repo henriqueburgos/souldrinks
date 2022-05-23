@@ -15,6 +15,7 @@ import { Error404Component } from './components/error404/error404.component';
 import { QuizzComponent } from './components/quizz/quizz.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -31,6 +32,7 @@ const maskConfig: Partial<IConfig> = {
     QuizzComponent,
     NavbarComponent,
     FooterComponent,
+    NovoProdutoComponent,
   ],
   imports: [
     BrowserModule,
