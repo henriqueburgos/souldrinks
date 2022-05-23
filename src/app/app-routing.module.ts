@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component';
 import { ProdutoComponent } from './components/produto/produto.component';
 import { QuizzComponent } from './components/quizz/quizz.component';
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'quizz', component: QuizzComponent},
   { path: 'navbar', component: NavbarComponent},
   { path: 'footer', component: FooterComponent},
+  { path: 'novo-produto', component: NovoProdutoComponent},
   { path: '**', component: Error404Component}
 ];
 

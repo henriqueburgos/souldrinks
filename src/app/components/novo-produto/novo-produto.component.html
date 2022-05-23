@@ -1,0 +1,82 @@
+<br>
+<p style= "text-align: center; font-size: 22px">Novo Produto</p>
+<form [formGroup]="adicaoProdForm" (ngSubmit)="onSubmit()" class="container">
+  <div class="mb-3">
+    <label for="imagem" class="form-label">* Imagem</label>
+    <input
+      formControlName="imagem" id="imagem"
+      tipo="text"
+      class="form-control"
+    />
+    <small class="text-danger" *ngIf="imagem?.touched && imagem?.invalid">
+      <span *ngIf="imagem?.hasError('required')">Campo obrigatório</span>
+    </small>
+  </div>
+  <div class="mb-3">
+    <label for="nomeDoProduto" class="form-label">* Nome do Produto</label>
+    <input
+      formControlName="nomeDoProduto"
+      id="nomeDoProduto"
+      class="form-control"
+      type="text"  />
+    <small
+      class="text-danger"
+      *ngIf="nomeDoProduto?.touched && nomeDoProduto?.invalid">
+      <span *ngIf="nomeDoProduto?.hasError('required')">Campo obrigatório</span>
+    </small>
+  </div>
+  <div class="mb-3">
+    <label for="descricao" class="form-label">* Descrição</label>
+    <input
+      formControlName="descricao"
+      id="descricao"
+      type="text"
+      class="form-control"
+    />
+    <small class="text-danger" *ngIf="descricao?.touched && descricao?.invalid">
+      <span *ngIf="descricao?.hasError('required')">Campo obrigatório</span>
+       </small>
+  </div>
+  <div class="mb-3">
+    <label for="preco" class="form-label">* Preço</label>
+    <input
+      formControlName="preco"
+      id="preco"
+      type="number"
+      class="form-control"
+    />
+    <small class="text-danger" *ngIf="preco?.touched && preco?.invalid">
+      <span *ngIf="preco?.hasError('required')">Campo obrigatório</span>
+    </small>
+  </div>
+  <div class="mb-3">
+    <label for="emPromocao" class="form-label">* Em Promoção</label>
+    <input
+      formControlName="emPromocao"
+      id="emPromocao"
+      type="boolean"
+      class="form-control"
+    />
+    <small class="text-danger" *ngIf="emPromocao?.touched && emPromocao?.invalid">
+      <span *ngIf="emPromocao?.hasError('required')">Campo obrigatório</span>
+    </small>
+  </div>
+  <div class="mb-3">
+    <label for="desconto" class="form-label">* Desconto</label>
+    <input
+      formControlName="desconto"
+      id="desconto"
+      type="number"
+      class="form-control"
+    />
+    <small class="text-danger" *ngIf="desconto?.touched && desconto?.invalid">
+      <span *ngIf="desconto?.hasError('required')">Campo obrigatório</span>
+       </small>
+  </div>
+ 
+  
+  <button class="btn btn-primary" [disabled]="adicaoProdForm.invalid">
+    Cadastrar
+  </button>
+</form>
+
