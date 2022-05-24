@@ -1,1 +1,75 @@
-<p>quizz works!</p>
+<div style="margin-left: 15px">
+    <h1>Faça o quizz e descubra qual drink é a sua cara!</h1>
+</div>
+<form [formGroup]="quizzForm" (ngSubmit)="onSubmit()" class="m-2">
+    <mat-stepper #stepper>
+        <mat-step [stepControl]="quizzForm">
+            <form [formGroup]="quizzForm">
+                <ng-template matStepLabel>Escolha uma viagem:</ng-template>
+                <div class="container">
+                    <input matInput formControlName="firstCtrl" type="submit" id="my-submit" name="submit" value="Get" required>
+                    <img id="v1" src={{imagemViagem1}} alt="..." width="380" height="245" style="margin: 15px;"
+                        (click)="onClique()">
+                    <img id="v2" src={{imagemViagem2}} alt="..." width="380" height="245" style="margin: 15px;"
+                        (click)="onClique()">
+                    <img id="v3" src={{imagemViagem3}} alt="..." width="380" height="245" style="margin: 15px;"
+                        (click)="onClique()">
+                    <div>
+                        <button id="n_btn" mat-button matStepperNext style="float: right;">Next</button>
+                    </div>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="quizzForm2">
+            <form [formGroup]="quizzForm2">
+                <ng-template matStepLabel>Uma sexta-feira ideal:</ng-template>
+                <div class="container">
+                    <input matInput formControlName="secondCtrl" type="submit" id="my-submit" name="submit" value="Get" required>
+                    <img id="s1" src={{imagemSexta1}} alt="..." width="380" height="245" style="margin: 15px;"
+                        (click)="onClique()">
+                    <img id="s2" src={{imagemSexta2}} alt="..." width="380" height="245" style="margin: 15px;"
+                        (click)="onClique()">
+                    <img id="s3" src={{imagemSexta3}} alt="..." width="380" height="245" style="margin: 15px;"
+                        (click)="onClique()">
+                    <div>
+                        <button id="p_btn" mat-button matStepperPrevious style="float: right;">Back</button>
+                        <button id="n_btn" mat-button matStepperNext style="float: right;">Next</button>
+                    </div>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="quizzForm3">
+            <form [formGroup]="quizzForm3">
+                <ng-template matStepLabel>Escolha um animal:</ng-template>
+                <div class="container">
+                    <mat-form-field>
+                        <input matInput formControlName="thirdCtrl" type="submit" id="my-submit" name="submit" value="Get" required>
+                        <img id="a1" src={{imagemAnimal1}} alt="..." width="380" height="245" style="margin: 15px;"
+                            (click)="onClique()">
+                        <img id="a2" src={{imagemAnimal2}} alt="..." width="380" height="245" style="margin: 15px;"
+                            (click)="onClique()">
+                        <img id="a3" src={{imagemAnimal3}} alt="..." width="380" height="245" style="margin: 15px;"
+                            (click)="onClique()">
+                        <div>
+                            <button id="p_btn" mat-button matStepperPrevious style="float: right;">Back</button>
+                            <button id="n_btn" mat-button matStepperNext style="float: right;">Next</button>
+                        </div>
+                    </mat-form-field>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template id="result" matStepLabel>Resultado:</ng-template>
+            <input formGroupName="resultado" type="text" id="resultado">
+            <p>{{resultado}}</p>
+ 
+            <div>
+                <button id="p_btn" mat-button matStepperPrevious style="float: right;">Back</button>
+                <button id="n_btn" mat-button (click)="stepper.reset()" style="float: right;">Reset</button>
+            </div>
+        </mat-step>
+        <ng-template matStepperIcon="done">
+            <mat-icon>done</mat-icon>
+        </ng-template>
+    </mat-stepper>
+</form>

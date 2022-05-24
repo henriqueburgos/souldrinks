@@ -10,7 +10,7 @@ export class ProdutosService {
       imagem: "https://www.thecocktaildb.com/images/ingredients/Jack%20Daniels.png",
       nomeProduto: "Jack Daniel's",
       descricao: " 1L | Whisky | 40%",
-      preco: 42.00,
+      preco: 113.00,
       emPromocao: true,
       desconto: 0.25,
       categoriaBebida: CategoriaBebida.WHISKY
@@ -18,14 +18,14 @@ export class ProdutosService {
     {
       imagem: "https://www.thecocktaildb.com/images/ingredients/Bourbon.png",
       nomeProduto: "Bacardi",
-      descricao: " 1L | Light rum |40%",
+      descricao: " 1L | Light rum | 40%",
       preco: 42.00,
       emPromocao: true,
       desconto: 0.25,
       categoriaBebida: CategoriaBebida.RUM
     },
     {
-      imagem: "https://cemporcentoskate.com.br/wp-content/uploads/2021/11/2DE86E9B-081D-4536-9F31-93912534867C-759x297.png",
+      imagem: "https://bomdebeer.vteximg.com.br/arquivos/ids/156932-1000-1000/Energetico-TNT-Original-473ml-7897395031626_1.png?v=637732718284000000",
       nomeProduto: "Energético TNT",
       descricao: "Un | 0% de açúcar | Taurina e cafeína | Reduz a sensação de cansaço e sonôlencia",
       preco: 5.49,
@@ -79,10 +79,10 @@ export class ProdutosService {
       categoriaBebida: CategoriaBebida.CHAMPANHE
     },
     {
-      imagem: "https://www.thecocktaildb.com/images/ingredients/Dry%20Vermouth.png",
-      nomeProduto: "Vermouth Martini",
-      descricao: "750ml | Vermouth Extra Dry | 18%",
-      preco: 110.0,
+      imagem: "https://www.thecocktaildb.com/images/ingredients/Campari.png",
+      nomeProduto: "Campari",
+      descricao: "700ml | Bitter | 20%",
+      preco: 80.0,
       emPromocao: true,
       desconto: 0.05, //0..1
       categoriaBebida: CategoriaBebida.VINHO
@@ -124,26 +124,26 @@ export class ProdutosService {
       categoriaBebida: CategoriaBebida.TEQUILA
     },
     {
-      imagem: "https://m.media-amazon.com/images/I/51okfLNl6uL._AC_SX679_.jpg",
-      nomeProduto: "Absinthe Verte",
-      descricao: "700ml | Absinto verde | 52%",
-      preco: 109.80,
+      imagem: "https://www.thecocktaildb.com/images/ingredients/Ricard.png",
+      nomeProduto: "Ricard",
+      descricao: "1L | Absinto francês | 52%",
+      preco: 509.80,
       emPromocao: true,
-      desconto: 0.05, //0..1
+      desconto: 0.20, //0..1
       categoriaBebida: CategoriaBebida.ABSINTO
     },
     {
-      imagem: "https://http2.mlstatic.com/D_NQ_NP_2X_842482-MLB46029716401_052021-F.webp",
-      nomeProduto: "Porto Morretes Premium",
-      descricao: "700ml | Cachaça Carvalho Orgânica | 39%",
-      preco: 149.0,
+      imagem: "https://www.thecocktaildb.com/images/ingredients/Apricot%20Brandy.png",
+      nomeProduto: "Apricot Brandy",
+      descricao: "1L | Liquor de pêssego | 25%",
+      preco: 49.0,
       emPromocao: false,
       desconto: 0.05, //0..1
       categoriaBebida: CategoriaBebida.CACHACA
     },
     {
-      imagem: "https://m.media-amazon.com/images/I/51pF1KqX0eL._AC_SX679_.jpg",
-      nomeProduto: "Guinness",
+      imagem: "https://www.thecocktaildb.com/images/ingredients/Root%20beer.png",
+      nomeProduto: "Root Beer",
       descricao: "440ml | Cerveja Draught | 4.2%",
       preco: 55.0,
       emPromocao: true,
@@ -151,28 +151,19 @@ export class ProdutosService {
       categoriaBebida: CategoriaBebida.CERVEJA
     },
     {
-      imagem: "https://m.media-amazon.com/images/I/416UfZ94vqS.jpg",
-      nomeProduto: "Conhaque Rémy Martin",
-      descricao: "700ml | Conhaque Brandy | 40%",
+      imagem: "https://www.thecocktaildb.com/images/ingredients/Triple%20Sec.png",
+      nomeProduto: "Cointreau",
+      descricao: "750ml | Conhaque Brandy | 40%",
       preco: 607.0,
       emPromocao: false,
       desconto: 0.05, //0..1
       categoriaBebida: CategoriaBebida.CONHAQUE
     },
     {
-      imagem: "https://d3gdr9n5lqb5z7.cloudfront.net/fotos/1643807834213.webp",
-      nomeProduto: "Saque SAKEIH",
-      descricao: "750ml | Saque seco | 14%",
-      preco: 14.90,
-      emPromocao: false,
-      desconto: 0.15, //0..1
-      categoriaBebida: CategoriaBebida.SAQUE
-    },
-    {
-      imagem: "https://carrefourbr.vtexassets.com/arquivos/ids/199528/8246378_1.jpg?v=637272444227630000",
-      nomeProduto: "Campo Largo",
-      descricao: "750ml | Vinho tinto suave | 10%",
-      preco: 22.0,
+      imagem: "https://www.thecocktaildb.com/images/ingredients/White%20Wine.png",
+      nomeProduto: "Cullen",
+      descricao: "750ml | Vinho branco suave - Semillion | 10%",
+      preco: 82.0,
       emPromocao: true,
       desconto: 0.45, //0..1
       categoriaBebida: CategoriaBebida.VINHO
