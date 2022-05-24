@@ -24,7 +24,7 @@
     </div>
     <div class="carousel-caption">
       <h3>Melhores</h3>
-      <p>As melhores bebidas é na SoulDrink</p>
+      <p>As melhores bebidas estão na SoulDrink</p>
     </div>
   </ng-template>
 </ngb-carousel>
@@ -37,7 +37,7 @@
     <div class="row">
       <div class="col-sm align-items-center" *ngFor="let item of cardGrid">
         <div class="card" style="width: 18rem;">
-          <img [src]="item.imagem" class="card-img-top" alt="item.alt">
+          <img [src]="item.imagem" class="card-img-top" alt={{item.alt}}>
           <div class="card-body">
             <h1 class="card-title">{{item.nomeProduto}}</h1>
             <h3 class="card-text">{{item.descricao}}</h3>

@@ -3,7 +3,7 @@
     <a class="navbar-brand" [routerLink]="'/'">
       <img src="/assets/logo.jpg" alt="logo com texto" width="130" height="60">
     </a>
-    <a class="navbar-brand" [routerLink]="'/'" > Home</a>
+    <a class="navbar-brand" [routerLink]="'/drink'" > Drink</a>
     <a class="navbar-brand" [routerLink]="'/produtos'" >Produtos </a>
     
     <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
@@ -25,6 +25,9 @@
         </li>
         <li class="nav-item active">
           <a class="nav-link" [routerLink]="'/feedback'" (click)="isMenuCollapsed = true">Feedback</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="'/novo-produto'" (click)="isMenuCollapsed = true">Novo Produto</a>
         </li>
       </ul>
     </div>

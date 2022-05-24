@@ -45,13 +45,13 @@ export class LoginComponent implements OnInit {
         alert(`Senha incorreta! Você possui ${3 - this.numTent} tentativas`);
       } else if (acesso.senha != this.senha?.value && this.numTent < 4) {
         this.numTent++
-        alert(`Voce está indo para sua ultima tentativa.`)
+        alert(`Voce está indo para sua última tentativa.`)
       } else if (acesso.senha != this.senha?.value && this.numTent >= 4) {
         this.blocklogin = true
         alert(`Você errou todas as suas tentativas, por favor aguarde ou recupere sua senha.`)
       }
     } else {
-      alert("você ainda nao possui cadastro")
+      alert("você ainda não possui cadastro")
     }
   }
 

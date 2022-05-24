@@ -1,0 +1,17 @@
+.container {
+    background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+}
+
+.select{
+    width: 250px;
+    height: 40px;
+    padding-left: 10px;
+    border-color: #888;
+}
+
+.select1{
+    width: 250px;
+    height: 50px;
+    padding-left: 10px;
+    border-color: #888;
+  }

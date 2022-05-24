@@ -19,6 +19,10 @@ import { NovoProdutoComponent } from './components/novo-produto/novo-produto.com
 import { ModalContentComponent } from './components/modal-content/modal-content.component';
 import { ProdutosComponent } from './components/produtos/produtos.component';
 import { ProdutoComponent } from './components/produto/produto.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DrinkComponent } from './components/drink/drink.component';
+
+
 const maskConfig: Partial<IConfig> = {
   validation: false,
 };
@@ -38,7 +42,9 @@ const maskConfig: Partial<IConfig> = {
     ModalContentComponent,
     ProdutosComponent,
     ProdutoComponent,
+    DrinkComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -48,10 +54,11 @@ const maskConfig: Partial<IConfig> = {
     ReactiveFormsModule,
     MatCardModule,
     NgxMaskModule.forRoot(maskConfig),
+    HttpClientModule,
   ],
-
 
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
