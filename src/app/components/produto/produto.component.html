@@ -1,1 +1,10 @@
-<p>produto works!</p>
+<mat-card class="example-card">
+  <mat-card-title-group>
+    <mat-card-title>{{produto.nomeProduto}}</mat-card-title>
+    <mat-card-subtitle>{{produto.preco | currency: "BRL"}}</mat-card-subtitle>
+    <img mat-card-xl-image [src]="produto.imagem">
+  </mat-card-title-group>
+  <mat-card-content>
+    {{produto.descricao}}
+  </mat-card-content>
+</mat-card>

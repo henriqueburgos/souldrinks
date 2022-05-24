@@ -9,6 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component';
 import { ProdutoComponent } from './components/produto/produto.component';
+import { ProdutosComponent } from './components/produtos/produtos.component';
 import { QuizzComponent } from './components/quizz/quizz.component';
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'feedback', component: FeedbackComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'produto', component: ProdutoComponent},
+  { path: 'produtos', component: ProdutosComponent},
   { path: 'error404', component: Error404Component},
   { path: 'quizz', component: QuizzComponent},
   { path: 'navbar', component: NavbarComponent},

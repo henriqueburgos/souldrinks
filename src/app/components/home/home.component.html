@@ -1,4 +1,5 @@
-<ngb-carousel *ngIf="images">
+<div class="carrossel">
+<ngb-carousel *ngIf="images" class="carr">
   <ng-template ngbSlide>
     <div class="">
       <img [src]="images[0]" >
@@ -27,6 +28,7 @@
     </div>
   </ng-template>
 </ngb-carousel>
+</div>
 <br>
 <br>
 
