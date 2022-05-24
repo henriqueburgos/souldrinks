@@ -21,7 +21,7 @@
     </div>
     <div class="mb-3">
       <label for="comentario" class="form-label">* Comentário</label>
-      <textarea class="form-control" id="comentario" rows="3"></textarea>
+      <textarea formControlName="comentario" class="form-control" id="comentario" rows="3"></textarea>
       <span *ngIf="comentario?.hasError('maxlength')"
         >Máximo de 50 caracteres
       </span>
