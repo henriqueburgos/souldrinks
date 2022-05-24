@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'produto', component: ProdutoComponent},
   { path: 'produtos', component: ProdutosComponent},
   { path: 'error404', component: Error404Component},
-  { path: 'quizz', component: QuizzComponent},
+  { path: 'quizz2', component: QuizzComponent},
   { path: 'navbar', component: NavbarComponent},
   { path: 'footer', component: FooterComponent},
   { path: 'novo-produto', component: NovoProdutoComponent},

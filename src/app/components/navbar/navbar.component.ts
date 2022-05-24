@@ -17,6 +17,8 @@ export class NavbarComponent implements OnInit {
   logout(){
     this.ls.logOut()
     this.logon=false
+    
+    window.location.reload();
   }
 
   constructor(private ls:LocalStorageService) { }

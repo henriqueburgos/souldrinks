@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { LocalStorageService } from 'src/app/shared/services/localStorage/local-storage.service';
+import { ProdutosService } from 'src/app/shared/services/produtos/produtos.service';
 
 @Component({
   selector: 'app-novo-produto',
@@ -9,16 +10,16 @@ import { LocalStorageService } from 'src/app/shared/services/localStorage/local-
 })
 export class NovoProdutoComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, private ls: LocalStorageService) { }
+  constructor(private fb: FormBuilder, private ls: LocalStorageService, private produtosService: ProdutosService) { }
 
   adicaoProdForm = this.fb.group({
     imagem:['',[Validators.required]],
-    nomeDoProduto: ['',[Validators.required]],
+    nomeProduto: ['',[Validators.required]],
     descricao: ['',[Validators.required]],
     preco:['',[Validators.required]],
     emPromocao:['',[Validators.required]],
-    desconto:['',[Validators.required]],
-    categoria:['', [Validators.required]]
+    desconto:['',],
+    categoria:['']
   })
 
   get imagem() {
@@ -26,7 +27,7 @@ export class NovoProdutoComponent implements OnInit {
   }
 
   get nomeDoProduto() {
-    return this.adicaoProdForm.get('nomeDoProduto')
+    return this.adicaoProdForm.get('nomeProduto')
   }
 
   get descricao() {
@@ -50,9 +51,9 @@ export class NovoProdutoComponent implements OnInit {
   }
 
   onSubmit() {
-    this.ls.set(this.adicaoProdForm.value)
        alert("Produto adicionado");
     console.log(this.adicaoProdForm.value)
+    this.produtosService.addProduto(this.adicaoProdForm.value)
   }
 
   ngOnInit(): void {

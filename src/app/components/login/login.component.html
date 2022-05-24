@@ -2,10 +2,10 @@
 <h2 style="text-align: center; font-size: 22px">Entrar na SoulDrink</h2>
 
 <form [formGroup]="loginForm" class="m-3" (ngSubmit)="onSubmit()" class="container">
-    <div class="mb-3">
+    <div class="mb-3" >
         <br>
         <label for="email" class="form-label">* Email</label>
-        <input formControlName="email" id="email" name="email" type="email" class="form-control" placeholder="Seu email" (keyup.enter)="onSubmit()"
+        <input  formControlName="email" id="email" name="email" type="email" class="form-control" placeholder="Seu email" (keyup.enter)="onSubmit()"
             required />
         <small *ngIf="email?.touched && email?.invalid" class="text-danger">
             <span *ngIf="email?.hasError('required')">Campo obrigatório.</span>
@@ -23,5 +23,5 @@
     </div>
     <button type="submit" class="btn btn-primary" *ngIf="!logon" [disabled]="loginForm.invalid" [disabled]="blocklogin">Login</button>
     <button type="submit" class="btn btn-secondary" *ngIf="logon" [disabled]="logon">Usuário Logado</button>
-    <button type="button" class="btn btn-primary m-2" (click)="open()">Esqueci minha senha</button>
+    <button type="button" class="btn btn-primary m-2"  (click)="open()" *ngIf="!logon" >Esqueci minha senha</button>
 </form>

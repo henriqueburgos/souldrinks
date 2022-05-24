@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
       if (acesso.senha == this.senha?.value) {
         this.ls.setLogon(acesso);
         this.logon=true;
+        window.location.reload();
         alert(`Olá ${acesso.nome}, seja bem vindo(a)!`);
       } else if (acesso.senha != this.senha?.value && this.numTent <3) {
         this.numTent++

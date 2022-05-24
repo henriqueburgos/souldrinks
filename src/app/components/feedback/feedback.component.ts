@@ -34,7 +34,7 @@ export class FeedbackComponent implements OnInit {
 
 
   onSubmit() {
-    alert(`Bem vindo(a)!`);
+    alert(`Obrigado pelo Feedback!`);
     console.log(this.feedbackFormulario.value);
   }
 

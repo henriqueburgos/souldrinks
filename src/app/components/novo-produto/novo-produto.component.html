@@ -15,7 +15,7 @@
   <div class="mb-3">
     <label for="nomeDoProduto" class="form-label">* Nome do Produto</label>
     <input
-      formControlName="nomeDoProduto"
+      formControlName="nomeProduto"
       id="nomeDoProduto"
       class="form-control"
       type="text"  />
@@ -54,7 +54,7 @@
     <input
       formControlName="emPromocao"
       id="emPromocao"
-      type="boolean"
+      type="text"
       class="form-control"
     />
     <small class="text-danger" *ngIf="emPromocao?.touched && emPromocao?.invalid">
