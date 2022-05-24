@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { DrinkComponent } from './components/drink/drink.component';
 import { Error404Component } from './components/error404/error404.component';
 import { FeedbackComponent } from './components/feedback/feedback.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -24,13 +25,14 @@ const routes: Routes = [
   { path: 'navbar', component: NavbarComponent},
   { path: 'footer', component: FooterComponent},
   { path: 'novo-produto', component: NovoProdutoComponent},
+  { path: 'drink', component: DrinkComponent},
   { path: '**', component: Error404Component}
 ];
-
 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

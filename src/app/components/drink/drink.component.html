@@ -1,0 +1,44 @@
+<br>
+<div class="container height: 50%;">
+    <div class="m-1">
+        <h2 style="text-align: left; font-size: 18px" for="search">Drink</h2>
+        <input type="text" name="search" class="form-control select" [(ngModel)]="nomeDrink">
+    </div>
+    <div class="m-1">
+        <h2 style="text-align: left; font-size: 18px" for="search">Tipo</h2>
+        <select type="text" name="search" class="form-control select1" size="2" [(ngModel)]="comAlcool"
+            (change)="getListDrinkcomOuSemAlcool()">
+            <option value=true>Com Álcool</option>
+            <option value=false>Sem Álcool</option>
+        </select>
+    </div>
+    <div class="m-1 col-12">
+        <button class="btn btn-primary m-1" [disabled]="nomeDrink.length===0"
+            (click)="getDrinkNome()">Buscar</button>
+    </div>
+    <hr />
+    <div *ngIf="loading" class="spinner-border"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm align-items-center" *ngFor="let item of listaDrink">
+                <div class="card" style="width: 18rem;">
+                    <img [src]="item.strDrinkThumb" class="card-img-top">
+                    <div class="card-body">
+                        <h1 class="card-title">{{item.strDrink}} - {{item.idDrink}} </h1>
+
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                    </div>
+
+                    <a (click)="getDrinkId(item.idDrink)"> Ver mais...</a>
+                    <div *ngIf="this.drink.idDrink === item.idDrink">
+                        id: {{this.drink.idDrink}}
+                        id: {{this.drink.strAlcoholic}}
+                        id: {{this.drink.strMeasure1}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
