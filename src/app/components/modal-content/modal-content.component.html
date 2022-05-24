@@ -1,0 +1,18 @@
+<form [formGroup]="redefinirSenhaForm" class="m-3">
+<div class="modal-header">
+    <h4 class="modal-title">Olá!</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <p>Por favor, informe seu email: </p>
+    <input formControlName="email" id="email" name="email" type="email" class="form-control">
+    <small *ngIf="email?.touched && email?.invalid" class="text-danger">
+        <span *ngIf="email?.hasError('required')">Campo obrigatório.</span>
+        <span *ngIf="email?.hasError('email')">Campo inválido.</span>
+    </small>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-success" (click)="redefinirSenha()" [disabled]="redefinirSenhaForm.invalid">Enviar</button>
+    <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Cancelar</button>
+  </div>
+</form>

@@ -1,5 +1,5 @@
 <br>
-<h2 style="text-align: center; font-size: 22px">Insira seus dados para Logar</h2>
+<h2 style="text-align: center; font-size: 22px">Entrar na SoulDrink</h2>
 
 <form [formGroup]="loginForm" class="m-3" (ngSubmit)="onSubmit()" class="container">
     <div class="mb-3">
@@ -21,8 +21,7 @@
             <span *ngIf="senha?.hasError('minlength')">Mínimo de 8 caractéres</span>
         </small>
     </div>
-    <button type="submit" class="btn btn-primary" *ngIf="!logon"[disabled]="loginForm.invalid" [disabled]="blocklogin">Login</button>
-    <button type="submit" class="btn btn-warning" *ngIf="logon" [disabled]="logon">Usuario Logado</button>
-    
-  
+    <button type="submit" class="btn btn-primary" *ngIf="!logon" [disabled]="loginForm.invalid" [disabled]="blocklogin">Login</button>
+    <button type="submit" class="btn btn-secondary" *ngIf="logon" [disabled]="logon">Usuário Logado</button>
+    <button type="button" class="btn btn-primary m-2" (click)="open()">Esqueci minha senha</button>
 </form>
