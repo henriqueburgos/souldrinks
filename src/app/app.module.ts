@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatCardModule} from '@angular/material/card';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -17,7 +17,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NovoProdutoComponent } from './components/novo-produto/novo-produto.component';
 import { ModalContentComponent } from './components/modal-content/modal-content.component';
-
+import { ProdutosComponent } from './components/produtos/produtos.component';
+import { ProdutoComponent } from './components/produto/produto.component';
 const maskConfig: Partial<IConfig> = {
   validation: false,
 };
@@ -35,6 +36,8 @@ const maskConfig: Partial<IConfig> = {
     FooterComponent,
     NovoProdutoComponent,
     ModalContentComponent,
+    ProdutosComponent,
+    ProdutoComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ const maskConfig: Partial<IConfig> = {
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    MatCardModule,
     NgxMaskModule.forRoot(maskConfig),
   ],
 

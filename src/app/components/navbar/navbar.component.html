@@ -1,9 +1,11 @@
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark nv">
   <div class="container-fluid">
     <a class="navbar-brand" [routerLink]="'/'">
       <img src="/assets/logo.jpg" alt="logo com texto" width="130" height="60">
     </a>
-    <a class="navbar-brand" [routerLink]="'/'" > {{nomeDoApp}}</a>
+    <a class="navbar-brand" [routerLink]="'/'" > Home</a>
+    <a class="navbar-brand" [routerLink]="'/produtos'" >Produtos </a>
+    
     <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
       &#9776;
     </button>
@@ -14,6 +16,9 @@
         </li>
         <li *ngIf="logon" class="nav-item">
           <a class="nav-link" [routerLink]="'/login'" (click)="isMenuCollapsed = true" (click)="logout()"> Logout</a>
+        </li>
+        <li *ngIf="logon" class="nav-item">
+          <a class="nav-link" [routerLink]="'/novo-produto'" (click)="isMenuCollapsed = true">Adição de produto</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="'/cadastro'" (click)="isMenuCollapsed = true">Cadastro</a>
@@ -28,3 +33,4 @@
     <a [routerLink]="'/usuario'"> Olá {{usuarioLogado.nome}}</a>
   </div>
 </nav>
+

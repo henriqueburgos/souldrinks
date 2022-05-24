@@ -179,7 +179,13 @@ export class ProdutosService {
     },
 
   ]
-  
+  getProdutos(): Produtos[] {
+    return this.produtos;
+  }
+
+  addProduto(produto: Produtos) {
+    this.produtos.push(produto);
+  }
 
   constructor() { }
 }
