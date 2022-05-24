@@ -26,15 +26,15 @@
                     <img [src]="item.strDrinkThumb" class="card-img-top">
                     <div class="card-body">
                         <h1 class="card-title">{{item.strDrink}} - {{item.idDrink}} </h1>
-
-                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                        <!-- <a href="#" class="btn btn-primary">Ver mais</a> -->
                     </div>
-
                     <a (click)="getDrinkId(item.idDrink)"> Ver mais...</a>
                     <div *ngIf="this.drink.idDrink === item.idDrink">
-                        id: {{this.drink.idDrink}}
-                        id: {{this.drink.strAlcoholic}}
-                        id: {{this.drink.strMeasure1}}
+                        <span>
+                        Id do drink: {{this.drink.idDrink}}
+                        Teor de álcool: {{this.drink.strAlcoholic}}
+                        Instruções (italiano): {{this.drink.strInstructionsIT}}
+                        </span>
                     </div>
                 </div>
             </div>
