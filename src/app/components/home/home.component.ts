@@ -9,7 +9,7 @@ import { cardGrid } from 'src/app/models/cardGrid';
 export class HomeComponent implements OnInit {
 
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = ["assets/903.jpg", "assets/901.jpg", "assets/940.jpg"]
 
   public cardGrid: cardGrid[] = [
     {
