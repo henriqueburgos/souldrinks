@@ -25,7 +25,7 @@ export class ProdutosService {
       categoriaBebida: CategoriaBebida.RUM
     },
     {
-      imagem: "https://cemporcentoskate.com.br/wp-content/uploads/2021/11/2DE86E9B-081D-4536-9F31-93912534867C-759x297.png",
+      imagem: "https://bomdebeer.vteximg.com.br/arquivos/ids/156944-292-292/Kit-Bolsa-TNT-Cross---8-latas-de-TNT-9905032_1.png?v=637732834765170000",
       nomeProduto: "Energético TNT",
       descricao: "Un | 0% de açúcar | Taurina e cafeína | Reduz a sensação de cansaço e sonôlencia",
       preco: 5.49,
@@ -50,15 +50,6 @@ export class ProdutosService {
       emPromocao: false,
       desconto: 0.2, //0..1
       categoriaBebida: CategoriaBebida.RUM
-    },
-    {
-      imagem: "https://www.thecocktaildb.com/images/ingredients/Dry%20Vermouth.png",
-      nomeProduto: "Vermouth Martini",
-      descricao: "750ml | Vermouth Extra Dry | 18%",
-      preco: 110.0,
-      emPromocao: true,
-      desconto: 0.05, //0..1
-      categoriaBebida: CategoriaBebida.VINHO
     },
     {
       imagem: "https://www.thecocktaildb.com/images/ingredients/Scotch.png",
@@ -124,7 +115,7 @@ export class ProdutosService {
       categoriaBebida: CategoriaBebida.TEQUILA
     },
     {
-      imagem: "https://m.media-amazon.com/images/I/51okfLNl6uL._AC_SX679_.jpg",
+      imagem: "https://w7.pngwing.com/pngs/717/880/png-transparent-absinthe-distilled-beverage-liqueur-borovi%C4%8Dka-slivovitz-absinthe-distilled-beverage-liquid-liqueur.png",
       nomeProduto: "Absinthe Verte",
       descricao: "700ml | Absinto verde | 52%",
       preco: 109.80,
@@ -133,7 +124,7 @@ export class ProdutosService {
       categoriaBebida: CategoriaBebida.ABSINTO
     },
     {
-      imagem: "https://http2.mlstatic.com/D_NQ_NP_2X_842482-MLB46029716401_052021-F.webp",
+      imagem: "https://cachacarianacional.vteximg.com.br/arquivos/ids/163790-1000-1000/cachaca-porto-morretes-premium-organica-700ml-01095_1.jpg?v=637617175826100000",
       nomeProduto: "Porto Morretes Premium",
       descricao: "700ml | Cachaça Carvalho Orgânica | 39%",
       preco: 149.0,
@@ -142,7 +133,7 @@ export class ProdutosService {
       categoriaBebida: CategoriaBebida.CACHACA
     },
     {
-      imagem: "https://m.media-amazon.com/images/I/51pF1KqX0eL._AC_SX679_.jpg",
+      imagem: "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202104/20/05218607900604____2__600x600.jpg",
       nomeProduto: "Guinness",
       descricao: "440ml | Cerveja Draught | 4.2%",
       preco: 55.0,
